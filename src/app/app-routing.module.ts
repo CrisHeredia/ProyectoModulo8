@@ -2,12 +2,19 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { BarraNavegacionComponent } from './barra-navegacion/barra-navegacion.component';
-//import { CompraComponent } from './compra/compra.component';
+import { CarritoComponent } from './carrito/carrito.component';
+import { CatalogoComponent } from './catalogo/catalogo.component';
+import { ProductoComponent } from './producto/producto.component';
+
 
 const routes: Routes = [
  { path: '', component: LoginComponent},
  { path: 'login', component: LoginComponent },
- { path: 'navegacion', component: BarraNavegacionComponent },
+ { path: 'navegacion', component: BarraNavegacionComponent, children:[
+   { path: 'catalogo', component: CatalogoComponent },
+   { path: 'carrito', component: CarritoComponent },
+   { path: 'producto', component: ProductoComponent },
+ ]}
 ];
 
 @NgModule({

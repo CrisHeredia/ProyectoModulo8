@@ -27,11 +27,25 @@ img {
 .botonMas {
   color: white;
   float: left;
-  background-color: blue;
+  background-color: #01579b;
   margin-left: 10px;
   margin-bottom: 10px;
+  height: 30px;
+}
+.botonAdd {
+  color: white;
+  background-color: #ff5722;
+  margin-bottom: 10px;
+  height: 30px;
+  float: right;
 }
 .contenedorfoto {
   border: solid 1px gray;
   margin: 5px;
+}
+.cant{
+  float: right;
+  width: 40px;
+  height: 25px;
+  margin-right: 10px;
 }

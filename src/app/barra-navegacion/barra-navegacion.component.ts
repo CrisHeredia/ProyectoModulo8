@@ -3,7 +3,7 @@ import { HttpService} from '../http.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-barra-navegacion',
+  selector: 'barra-navegacion',
   templateUrl: './barra-navegacion.component.html',
   styleUrls: ['./barra-navegacion.component.css']
 })

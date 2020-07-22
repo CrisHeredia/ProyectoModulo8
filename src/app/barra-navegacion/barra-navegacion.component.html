@@ -2,10 +2,10 @@
   <div class="barra-navegacion">
     <h4>La Bodega</h4>
     <nav>
-      <a [routerLink]="['catalogo']">Catalogo</a>
-      <a [routerLink]="['carrito']">Carrito</a>
-      <a [routerLink]="['login']">Cerrar sesión</a>
+      <a routerLink="/navegacion/catalogo">Catalogo</a>
+      <a routerLink="/navegacion/carrito">Carrito</a>
+      <a routerLink="/login">Cerrar sesión</a>
     </nav>
   </div>
-  <app-catalogo></app-catalogo>
+  <router-outlet></router-outlet>
 </body>

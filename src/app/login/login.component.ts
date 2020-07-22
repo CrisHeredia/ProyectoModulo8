@@ -5,7 +5,7 @@ import { Response } from '@angular/http';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-login',
+  selector: 'login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
   providers: [DataService]
@@ -48,7 +48,8 @@ export class LoginComponent implements OnInit{
         if (mensaje === 0){
           alert("Usuario y password no encontrados ...");
         } else {
-          this.router.navigate(['/navegacion']);
+          console.log(data);
+          //this.router.navigate(['/navegacion/catalogo']);
         }
       }
     )
