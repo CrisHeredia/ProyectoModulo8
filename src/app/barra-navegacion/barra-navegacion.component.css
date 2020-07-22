@@ -1,0 +1,22 @@
+.fondo-principal {
+  background-image: url("../../../assets/img/main-fondo.jpg");
+  background-size: cover;
+}
+
+.barra-navegacion{
+  margin-left: 150px;
+  margin-right: 150px;
+  background: white;
+
+}
+
+h4{
+  font-family: helvetica;
+  margin-left: 10px;
+  color: gray;
+}
+
+nav {
+  text-align: right;
+  margin-right: 50px;
+}
