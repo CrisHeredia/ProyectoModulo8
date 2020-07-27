@@ -1,33 +1,39 @@
-body {
+body{
   background-image: url("../../../assets/img/login-fondo.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
 }
 
-.main{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 50.6rem;
+.container{
+  height: 100%;
+  align-content: center;
 }
 
-.login-container{
-  width: 80%;
+.card{
+  margin-top: auto;
+  margin-bottom: auto;
+  height: 700px;
+  width: 400px;
 }
 
-.callout.login h4{
+form{
   text-align: center;
-  color: white;
+  margin-top: 250px;
+}
+
+.btn-container{
+  display: flex;
+  justify-content: center;
+}
+
+h4 {
   font-size: 20px;
+  color: white;
   font-family: cursive;
 }
 
-div.btn-container{
-  display: flex;
-  justify-content: center;
-}
-
-.row-titulo {
+.row-titulo{
   text-align: center;
   color: white;
   font-size: 16px;

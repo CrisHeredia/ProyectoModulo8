@@ -1,19 +1,17 @@
 <body>
-  <div class="main">
-    <div class="login-container">
-      <div class="callout primary login">
-        <h4>Inicia sesión</h4>
-        <form (ngSubmit)="enviarForm(f)"#f="ngForm">
-          <div class="row align-center">
-            <div>
+  <div class="container">
+    <div class="d-flex justify-content-center h-100">
+      <div class="card">
+        <div class="card-body">
+          <form (ngSubmit)="enviarForm(f)"#f="ngForm">
+            <h4>Inicia sesión</h4>
+            <div class="row align-center">
               <div class="row-titulo">
                 <label>Correo Electrónico</label>
               </div>
               <div class="row-contenido">
                 <input type="text" id="user" ngModel name="user" required>
               </div>
-            </div>
-            <div>
               <div class="row-titulo">
                 <label>Contraseña</label>
               </div>
@@ -21,11 +19,11 @@
                 <input type="password" id="password" ngModel name="password" required>
               </div>
             </div>
-            <div class="col s7 btn-container">
+            <div class="col m7 btn-container">
               <button type="submit" class="button">Ingresar</button>
             </div>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
     </div>
   </div>

@@ -1,3 +1,43 @@
-<p>
-  carrito works!
-</p>
+<div class="row main">
+  <div class="container">
+    <h2>Catálogo de Productos</h2>
+    <div class="row" *ngFor="let prod of productos">
+      <div class="col-md-3">
+        <img src={{prod.Ruta}}/>
+        <h3>{{prod.Nombre}}</h3>
+        <p>Precio: {{prod.Precio}}</p>
+        <p>Cantidades disponibles: {{prod.CantDisp}}</p>
+        <button class="botonMas" routerLink="/navegacion/producto">Ver más</button>
+        <input type="number" class="cant" name="Cant" min=1 placeholder="1" required>
+        <button class="botonAdd" type="submit">Añadir</button>
+      </div>
+      <div class="col-md-3">
+        <img src={{prod.Ruta}}/>
+        <h3>{{prod.Nombre}}</h3>
+        <p>Precio: {{prod.Precio}}</p>
+        <p>Cantidades disponibles: {{prod.CantDisp}}</p>
+        <button class="botonMas" routerLink="/navegacion/producto">Ver más</button>
+        <input type="number" class="cant" name="Cant" min=1 placeholder="1" required>
+        <button class="botonAdd" type="submit">Añadir</button>
+      </div>
+      <div class="col-md-3">
+        <img src={{prod.Ruta}}/>
+        <h3>{{prod.Nombre}}</h3>
+        <p>Precio: {{prod.Precio}}</p>
+        <p>Cantidades disponibles: {{prod.CantDisp}}</p>
+        <button class="botonMas" routerLink="/navegacion/producto">Ver más</button>
+        <input type="number" class="cant" name="Cant" min=1 placeholder="1" required>
+        <button class="botonAdd" type="submit">Añadir</button>
+      </div>
+      <div class="col-md-3">
+        <img src={{prod.Ruta}}/>
+        <h3>{{prod.Nombre}}</h3>
+        <p>Precio: {{prod.Precio}}</p>
+        <p>Cantidades disponibles: {{prod.CantDisp}}</p>
+        <button class="botonMas" routerLink="/navegacion/producto">Ver más</button>
+        <input type="number" class="cant" name="Cant" min=1 placeholder="1" required>
+        <button class="botonAdd" type="submit">Añadir</button>
+      </div>
+    </div>
+  </div>
+</div>

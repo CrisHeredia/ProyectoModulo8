@@ -9,11 +9,11 @@ export class DataService{
 
   constructor(private logService: LogService, private httpService : HttpService){}
 
-  getUsers(){
+  /*getUsers(){
     this.httpService.getDatos()
     .subscribe(
       (data: Response) => console.log(data)
     )
     return this.usuarios;
-  }
+  }*/
 }

@@ -6,8 +6,14 @@ import 'rxjs/Rx';
 export class HttpService {
 
   constructor(private http: Http) { }
+  
   getDatos(){
     return this.http.get('https://tienda-38714.firebaseio.com/.json')
+    .map((response:Response)=>response.json())
+  }
+
+  getDatosProductos(){
+    return this.http.get('https://tienda-38714.firebaseio.com/Productos/.json')
     .map((response:Response)=>response.json())
   }
 

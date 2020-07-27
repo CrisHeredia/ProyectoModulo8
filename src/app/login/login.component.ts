@@ -48,8 +48,7 @@ export class LoginComponent implements OnInit{
         if (mensaje === 0){
           alert("Usuario y password no encontrados ...");
         } else {
-          console.log(data);
-          //this.router.navigate(['/navegacion/catalogo']);
+          this.router.navigate(['/navegacion/catalogo']);
         }
       }
     )
