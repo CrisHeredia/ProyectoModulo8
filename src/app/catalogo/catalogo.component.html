@@ -1,14 +1,24 @@
 <div class="container">
-  <h2>Catálogo de Productos</h2>
-  <div class="row col-md-3 producto" *ngFor="let prod of productos">
-    <div>
-      <img src={{prod.Ruta}}/>
-      <h3>{{prod.Nombre}}</h3>
-      <p>Precio: {{prod.Precio}}</p>
-      <p>Cantidades disponibles: {{prod.CantDisp}}</p>
-      <button class="botonMas" routerLink="/navegacion/producto">Ver más</button>
-      <input type="number" class="cant" name="Cant" min=1 placeholder="1" required>
-      <button class="botonAdd" type="submit">Añadir</button>
+  <div class="row">
+    <div class="col-md-6">
+      <h2>Catálogo de Productos</h2>
+    </div>
+    <div class="col-md-6 busqueda">
+      <label for="search" class="titulo">Que estás buscando?</label><br>
+      <input type="text" [(ngModel)]="name" (ngModelChange)="reSearch(name)" placeholder="Buscar Producto"/>
+    </div>
+  </div>
+  <div class="scroll">
+    <div class="row col-md-3 producto" *ngFor="let prod of productos">
+      <div>
+        <img src={{prod.Ruta}}/>
+        <h3>{{prod.Nombre}}</h3>
+        <p>Precio: {{prod.Precio}}</p>
+        <p>Cantidades disponibles: {{prod.CantDisp}}</p>
+        <button class="botonMas" [routerLink]="['/navegacion/producto',prod.Nombre,prod.Ruta,prod.Precio,prod.CantDisp]">Ver más</button>
+        <input type="number" class="cant" name="Cant" min=1 placeholder="1" required>
+        <button class="botonAdd" type="submit">Añadir</button>
+      </div>
     </div>
   </div>
 </div>

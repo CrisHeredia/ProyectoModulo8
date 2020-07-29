@@ -1,3 +1,18 @@
-<p>
-  producto works!
-</p>
+<div class="container">
+  <div class="row">
+      <h2>{{nombreProd | titlecase}}</h2>
+  </div>
+  <div class="row">
+    <div class="col-md-8">
+      <img src={{rutaProd}}/>
+    </div>
+    <div class="col-md-4">
+      <br>
+      <p>Precio: {{precioProd}}</p>
+      <p>Unidades disponibles: {{cantProd}}</p>
+    </div>
+  </div>
+  <div class="row">
+    <button class="botonRegresar" routerLink="/navegacion/catalogo">Regresar</button>
+  </div>
+</div>

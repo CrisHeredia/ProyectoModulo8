@@ -10,8 +10,26 @@ img {
   margin: 5px 0px 0px 0px;
 }
 .container {
-  margin: 20px 0px 20px 80px;
-  background: yellow;
+  width: 86%;
+  height: 670px;
+  align-content: center;
+  margin: 20px 80px 20px 80px;
+  background: white;
+}
+
+.titulo {
+  font-family: helvetica;
+  color: gray;
+  text-align: right;
+}
+
+.busqueda {
+  text-align: right;
+}
+
+.scroll{
+  height:590px;
+  overflow-y: scroll;
 }
 
 .producto{

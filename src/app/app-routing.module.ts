@@ -13,7 +13,7 @@ const routes: Routes = [
  { path: 'navegacion', component: BarraNavegacionComponent, children:[
    { path: 'catalogo', component: CatalogoComponent },
    { path: 'carrito', component: CarritoComponent },
-   { path: 'producto', component: ProductoComponent },
+   { path: 'producto/:nombre/:imagen/:precio/:cantidad', component: ProductoComponent },
  ]}
 ];
 
