@@ -1,11 +1,18 @@
 <body class="fondo-principal">
   <div class="barra-navegacion">
-    <h4>La Bodega</h4>
-    <nav  class="navbar">
-      <a class="glyphicon glyphicon-th" routerLink="/navegacion/catalogo"></a>
-      <a class="glyphicon glyphicon-shopping-cart" routerLink="/navegacion/carrito"></a>
-      <a class="glyphicon glyphicon-log-out" routerLink="/login"></a>
-    </nav>
+    <div class="row">
+      <div class="col-md-4">
+        <h4>La Bodega</h4>
+      </div>
+      <div class="col-md-8">
+        <nav  class="navbar">
+          <a class="glyphicon glyphicon-th" routerLink="/navegacion/catalogo"></a>
+          <a class="glyphicon glyphicon-shopping-cart" routerLink="/navegacion/carrito"></a>
+          <a class="items-carrito" *ngIf="registros>0">{{registros}}</a>
+          <a class="glyphicon glyphicon-log-out" routerLink="/login"></a>
+        </nav>
+      </div>
+    </div>
   </div>
   <router-outlet></router-outlet>
 </body>

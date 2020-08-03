@@ -16,8 +16,8 @@
         <p>Precio: {{prod.Precio}}</p>
         <p>Cantidades disponibles: {{prod.CantDisp}}</p>
         <button class="botonMas" [routerLink]="['/navegacion/producto',prod.Nombre,prod.Ruta,prod.Precio,prod.CantDisp]">Ver más</button>
-        <input type="number" class="cant" name="Cant" min=1 placeholder="1" required>
-        <button class="botonAdd" type="submit">Añadir</button>
+        <input type="number" class="cant" name="Cant" min=1 placeholder="1" required #input>
+        <button class="botonAdd" (click)="addProd(prod.Nombre,prod.Ruta,prod.CantDisp,prod.Precio,input.value)">Añadir</button>
       </div>
     </div>
   </div>
