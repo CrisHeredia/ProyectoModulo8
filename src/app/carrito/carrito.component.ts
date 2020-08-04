@@ -13,6 +13,8 @@ export class CarritoComponent implements OnInit {
   carrito : any [] = [];
   aux : any[] = [];
   suma : number = 0;
+  cantSol : number = 0;
+  producto : string = "";
 
   constructor(private httpService : HttpService, private router : Router) { }
 
@@ -24,18 +26,19 @@ export class CarritoComponent implements OnInit {
           this.aux.push(data[key]);
         }
         this.carrito = this.aux;
-        console.log(this.carrito);
-        //for (let numero of this.carrito){
-          //this.suma = this.suma.Subtotal;
-        //}
+        for (var i = 0; i < this.carrito.length; i++) {
+            this.suma+= this.carrito[i].Subtotal;
+        }
       }
     )
-    let registros = this.carrito.length;
-    console.log(registros);
-    for (var i = 0; i < this.carrito.length; i++) {
-        this.suma+= this.carrito[i].Subtotal;
-        //alert(this.carrito[i].Subtotal);
-    }
   }
-    //return this.suma;
+
+  pagar(){
+    for (var i = 0; i < this.carrito.length; i++) {
+      this.cantSol = this.carrito[i].CantSol;
+      this.producto = this.carrito[i].NomProd;
+      alert(this.producto+this.cantSol);
+    }
+    this.router.navigate(['/navegacion/catalogo']);
+  }
 }

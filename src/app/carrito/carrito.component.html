@@ -18,10 +18,10 @@
     <div>
       <h2>Total a Pagar</h2>
       <br>
-      <h2>{{suma}}</h2>
+      <h2>$ {{suma | number}}</h2>
       <br>
-      <button class="botones">Cancelar</button>
-      <button class="botones">Pagar</button>
+      <button type="button" class="botones" routerLink="/navegacion/catalogo">Cancelar</button>
+      <button type="button" class="botones" (click)="pagar()">Pagar</button>
     </div>
   </div>
 </div>

@@ -27,4 +27,8 @@ export class HttpService {
     return this.http.get('https://tienda-38714.firebaseio.com/Carrito/.json')
     .map((response:Response)=>response.json())
   }
+
+  updateCant(){
+    
+  }
 }
