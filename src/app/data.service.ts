@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { LogService } from './log.service';
+//import { LogService } from './log.service';
 import { HttpService } from './http.service';
 import { Response } from '@angular/http';
 
@@ -7,6 +7,6 @@ import { Response } from '@angular/http';
 export class DataService{
 
 
-  constructor(private logService: LogService, private httpService : HttpService){}
+  constructor(private httpService : HttpService){}
 
 }

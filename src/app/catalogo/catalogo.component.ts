@@ -1,18 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { DataService } from '../data.service';
 import { HttpService} from '../http.service';
 import { Response } from '@angular/http';
-import { FormsModule} from "@angular/forms"
 import { Producto } from '../Carrito';
 import { BarraNavegacionComponent } from '../barra-navegacion/barra-navegacion.component'
-
 
 @Component({
   selector: 'catalogo',
   templateUrl: './catalogo.component.html',
   styleUrls: ['./catalogo.component.css'],
-  providers: [DataService]
+  providers: []
 })
 
 export class CatalogoComponent implements OnInit {
@@ -20,7 +17,9 @@ export class CatalogoComponent implements OnInit {
   productos: any [] = [];
   aux : any[] = [];
 
-  constructor(private httpService : HttpService, private router : Router, private parent: BarraNavegacionComponent) { }
+  constructor(private httpService : HttpService,
+              private router : Router,
+              private parent: BarraNavegacionComponent) { }
 
   ngOnInit() {
     this.httpService.getDatosProductos()

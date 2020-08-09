@@ -49,3 +49,7 @@ h4 {
 input.ng-touched.ng-invalid{
   border: 1px solid red;
 }
+
+.hint {
+  color: black;
+}

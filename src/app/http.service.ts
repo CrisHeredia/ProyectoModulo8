@@ -28,7 +28,14 @@ export class HttpService {
     .map((response:Response)=>response.json())
   }
 
-  updateCant(){
-    
+  updateCant(producto,pos){
+    const datos = JSON.stringify(producto);
+    return this.http.put('https://tienda-38714.firebaseio.com/Productos/'+pos+'.json',datos)
+    .map((response:Response)=>response.json())
+  }
+
+  borrarProdCarrito(){
+    return this.http.delete('https://tienda-38714.firebaseio.com/Carrito/.json')
+    .map((response:Response)=>response.json())
   }
 }
